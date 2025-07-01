@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迁知社 - 自由转移的探索者</title>
+    <style>
+        :root {
+            --primary-color: #6a4c93;
+            --secondary-color: #8a5a44;
+            --accent-color: #f8f1ff;
+            --text-color: #333;
+            --light-bg: #f9f7f3;
+        }
+        
+        body {
+            font-family: 'SimSun', '宋体', serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 0.5rem;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav li {
+            margin: 0 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        
+        .founder {
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
+        }
+        
+        .founder-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 2rem;
+            border: 3px solid var(--secondary-color);
+        }
+        
+        .library-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .library-item {
+            background-color: var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .library-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .library-item h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .library-item .stats {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin: 0.5rem 0;
+        }
+        
+        .meeting-room {
+            background-color: var(--accent-color);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .meeting-room button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .meeting-room button:hover {
+            background-color: #5a3d7a;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .philosophy {
+            font-style: italic;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: var(--accent-color);
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+            
+            .founder {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .founder-img {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>迁知社</h1>
+            <div class="subtitle">自由转移的探索者 · 成立于2025年</div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">关于我们</a></li>
+            <li><a href="#library">图书馆</a></li>
+            <li><a href="#meeting">会议室</a></li>
+            <li><a href="#contact">联系我们</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="about">
+            <h2>关于迁知社</h2>
+            <p>迁知社是一个致力于探索转移现象的组织。我们相信每个人都拥有无限自由的可能性，而转移正是这种自由的体现。在这里，我们分享经验，记录故事，探索未知的世界。</p>
+            
+            <div class="philosophy">
+                "边界只是幻象，自由才是本质。每个人都是无限可能的旅行者。"
+            </div>
+            
+            <div class="founder">
+                <img src="https://placeholder.pics/svg/150x150/DEDEDE/555555/溯梦" alt="社长溯梦" class="founder-img">
+                <div>
+                    <h3>社长 · 溯梦</h3>
+                    <p>溯梦是迁知社的创始人和领导者，一位经验丰富的转移者。他相信转移不仅是空间的跨越，更是自身的解放。在他的引导下，迁知社成为了转移者们分享与学习的家园。</p>
+                    <p>"我们不是在逃离，而是在寻找更真实的自己。" —— 溯梦</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="library">
+            <h2>图书馆</h2>
+            <p>迁知社图书馆收藏了大量关于转移的文献和记录，以下是我们的主要藏品：</p>
+            
+            <div class="library-items">
+                <div class="library-item">
+                    <h3>6本外国转移书籍</h3>
+                    <div class="stats">30万字 · 已完成</div>
+                    <p>收集自世界各地的转移者记录，包含不同文化对转移的理解和实践。</p>
+                </div>
+                
+                <div class="library-item">
+                    <h3>迁知报1-4刊</h3>
+                    <div class="stats">40万字 · 每刊10万字</div>
+                    <p>迁知社的定期出版物，记录最新的转移发现和成员分享。</p>
+                </div>
+                
+                <div class="library-item">
+                    <h3>迁知社官方手册</h3>
+                    <div class="stats">1万字</div>
+                    <p>新成员指南，包含迁知社的历史、理念和基本转移守则。</p>
+                </div>
+                
+                <div class="library-item">
+                    <h3>转移随笔</h3>
+                    <div class="stats">40万字</div>
+                    <p>溯梦的个人记录，充满诗意的转移体验和感悟。</p>
+                </div>
+                
+                <div class="library-item">
+                    <h3>pie语录</h3>
+                    <div class="stats">30万字</div>
+                    <p>著名转移者pie的言论集，充满了对转移本质的深刻洞见。</p>
+                </div>
+                
+                <div class="library-item">
+                    <h3>转移者调查报告</h3>
+                    <div class="stats">20万字</div>
+                    <p>对数百位转移者的系统性访谈和分析。</p>
+                </div>
+                
+                <div class="library-item">
+                    <h3>转移资料</h3>
+                    <div class="stats">80万字</div>
+                    <p>迁知社收集的各种转移相关文献、笔记和研究。</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="meeting">
+            <h2>会议室</h2>
+            <div class="meeting-room">
+                <p>迁知社的会议室是成员们交流转移经验和心得的地方。我们定期举办分享会、讨论组和冥想活动。</p>
+                <p>下一次会议将在三天后举行，主题是"边界之外的自我"。</p>
+                <button id="joinMeeting">申请参加</button>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>联系我们</h2>
+            <p>如果您对迁知社感兴趣，或是有转移相关的经验想要分享，欢迎联系我们：</p>
+            <p>邮箱：sixteennightssak2@proton.me</p>
+            <p>地址：心灵之径7号，自由之都</p>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 迁知社 · 探索无限可能</p>
+        <p>"每一个世界都是真实的，每一次转移都是归家。"</p>
+    </footer>
+    
+    <script>
+        document.getElementById('joinMeeting').addEventListener('click', function() {
+            alert('已收到您的参会申请，溯梦将会亲自审核。请静候消息。');
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
